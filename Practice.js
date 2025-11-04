@@ -1,3 +1,5 @@
+  import { poseLabels } from "./pose_labels.js";
+
   let video;
   let poseNet;
   let pose;

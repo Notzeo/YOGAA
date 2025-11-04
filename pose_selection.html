@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select Pose - Yogasthali</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-green-100 flex flex-col items-center p-8 min-h-screen">
+  <h1 class="text-4xl font-bold mb-8">Choose Your Pose</h1>
+
+  <div id="poseGrid" class="grid grid-cols-2 gap-8"></div>
+
+  <script>
+    // 1️⃣ Pose data (you can expand easily)
+    const poses = [
+      { name: "Tadasana", img: "images/tada.png" },
+      { name: "Vrikshasana", img: "images/tree.jpg" },
+      { name: "Trikonasana", img: "images/trik.jpg" }
+    ];
+
+    // 2️⃣ Read mode (learn or practice)
+    const params = new URLSearchParams(window.location.search);
+    const mode = params.get("mode");
+
+    // 3️⃣ Render cards dynamically
+    const grid = document.getElementById("poseGrid");
+
+    poses.forEach(pose => {
+      const card = document.createElement("div");
+      card.className = "bg-white rounded-2xl shadow-md overflow-hidden text-center p-4 hover:shadow-lg transition";
+      card.innerHTML = `
+        <img src="${pose.img}" class="w-full h-40 object-cover rounded-xl mb-4">
+        <h2 class="text-xl font-semibold mb-2">${pose.name}</h2>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-xl hover:bg-blue-600">Select</button>
+      `;
+      
+      card.querySelector("button").onclick = () => {
+        if (mode === "learn") {
+          window.location.href = `learnPose.html?pose=${pose.name.toLowerCase()}`;
+        } else {
+          window.location.href = `practicePose.html?pose=${pose.name.toLowerCase()}`;
+        }
+      };
+
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>
