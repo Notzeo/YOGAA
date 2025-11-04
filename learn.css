@@ -1,0 +1,68 @@
+*{
+    color:deeppink
+}
+.parent{
+    
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    left: 53%;
+    top:5%;
+}
+.parent>h1{
+    text-align: center;
+    font-size: 40px;
+}
+#poseImg{
+    position: absolute;
+    left: 64%;
+    top:15%;
+    height: inherit;
+    width: 60%;
+    border: 2px green inset;
+}
+#sec{
+    position:absolute;
+    left:64%;
+    top:90%
+
+}
+#timer{
+    position:absolute;
+    left:71%;
+    top:80%
+}
+#finish{
+    position: relative;
+    left: 20%;
+    top: 80%;
+}
+#welldone{
+    position: absolute;
+    left: 10%;
+    bottom: 4%;
+}
+
+#videoContainer {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 600px;
+  height: 470px;
+  border-radius: 20px;
+  border: 4px solid transparent;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.correct-glow {
+  border-color: #00ff88;
+  box-shadow: 0 0 25px #00ff88, 0 0 50px #00ff88;
+}
+
+.incorrect-glow {
+  border-color: #ff3c3c;
+  box-shadow: 0 0 25px #ff3c3c, 0 0 50px #ff3c3c;
+}
+

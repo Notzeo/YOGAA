@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+}
+#container{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("images/instruc.png");
+    background-position: center;
+    background-size:cover;
+    position: relative;
+}
+#logo{
+    height: 140px;
+    width: 200px;   
+}
+.hed{
+    position: absolute;
+    width: 100%; 
+    top:25%;
+    left:50%;
+    font-weight: bolder;
+    font-size: xx-large;
+    text-transform: uppercase;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: rgb(26, 15, 130);
+}
+#first{
+    position: absolute;
+    top: 35%;
+    left: 5%;
+}
+#second{
+    position: absolute;
+    top: 60%;
+    left: 40%; 
+}
+#photo{
+    position: absolute;
+    top: 60%;
+    left: 57%;
+    height: 200px;
+    width: 200px;
+}
+#third{
+    position: absolute;
+    top: 35%;
+    left: 73%;
+    
+}
+#pic{
+    width: 15%;
+    position: absolute;
+    left:84%;
+    top:17%
+
+}
+.str{
+    position: relative;
+    left:800px;
+    top:400px;
+    display: inline-block;
+    text-decoration: none;
+    color: deeppink;
+    border: 1px solid deeppink;
+    padding: 15px 34px;
+    font-size: 17px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.str:hover{
+    background-color: deeppink ;
+    color: white;
+    transition: 0.5s;
+}
+#pic>img{
+    height: 150px;
+    width: 130px;;
+}
+p{
+    font-size:25px;
+    color: deeppink;
+}
+h1{
+    color: rgb(26, 15, 130);
+}
+
+#videoContainer {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 600px;
+  height: 470px;
+  border-radius: 20px;
+  border: 4px solid transparent;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.correct-glow {
+  border-color: #00ff88;
+  box-shadow: 0 0 25px #00ff88, 0 0 50px #00ff88;
+}
+
+.incorrect-glow {
+  border-color: #ff3c3c;
+  box-shadow: 0 0 25px #ff3c3c, 0 0 50px #ff3c3c;
+}
+
